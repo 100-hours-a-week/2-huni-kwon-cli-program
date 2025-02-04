@@ -12,7 +12,7 @@ class ConsumableItem extends Item {
     public void use(Player player) {
         try {
             if (player == null) throw new IllegalArgumentException("플레이어가 존재하지 않습니다!");
-            System.out.println("🩹 " + player.name + "가 " + name + "를 사용하여 체력을 " + heal + " 회복했습니다!");
+            System.out.println(player.name + "이 " + name + "을 사용하여 체력을 " + heal + " 회복했습니다!");
             player.hp += heal;
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
