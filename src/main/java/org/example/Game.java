@@ -78,12 +78,12 @@ public class Game {
                     if(!itemuse) continue;
                     break;
                 case 4:
-                    if (player.escape()) {
+                    case 4:
+                    if(stage%10 == 0){
+                        System.out.println("보스 기운이 발을 묶습니다. 도망칠 수 없습니다.");
+                        continue;
+                    } else if (player.escape()) {
                         stage++;
-                        if(stage/10 == 0){
-                            System.out.println("보스 기운이 발을 묶습니다. 도망칠 수 없습니다.");
-                            continue;
-                        }
                         return;
                     }
                     break;
