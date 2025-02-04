@@ -12,7 +12,7 @@ class Player extends Character {
 
     public void defend(Monster monster) {
         try {
-            System.out.println(name + "가 방어를 시도합니다!");
+            System.out.println(name + "이 방어를 시도합니다!");
             if (Math.random() < 0.2) {
                 int reducedDamage = monster.attack / 2;
                 takeDamage(reducedDamage);
